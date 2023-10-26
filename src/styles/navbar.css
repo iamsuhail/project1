@@ -2,7 +2,7 @@
 
 nav {
   border-bottom: 1px solid rgba(28, 73, 128, 0.1);
-  height: 60px;
+  /* height: 60px; */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -95,7 +95,7 @@ nav {
   align-items: center;
 }
 
-.nav-tabs > div a,
+.nav-tabs > div a,.hovercard-container,
 .mobile-nav-tabs > div a {
   display: flex;
   flex-direction: column;
@@ -106,23 +106,12 @@ nav {
   padding: 10px;
   border: 1px solid transparent; /* Add this line to create a border */
   border-radius: 18px; /* Add this line to round the corners */
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.01s, color 0.01s;
 }
 
-/* .nav-tabs > div a:before,
-.mobile-nav-tabs > div a:before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  /* width: 100%;
-  height: 4px; */
-  /* background-color: var(--secondary-color); */
-  /* transform: scale(0);
-  transition: all 0.4s ease;
-}  */
 
-.nav-tabs > div a:hover,
+
+.nav-tabs > div a:hover,.hovercard-container,
 .mobile-nav-tabs > div a:hover {
   background-color: var(--secondary-color); /* Change the background color on hover */
   color: white; /* Change the text color on hover */
@@ -131,7 +120,7 @@ nav {
 
 .nav-tabs > div a:hover:before,
 .active:before {
-  transform: scale(1) !important;
+  transform: scale(10) !important;
 }
 
 /* .tab-icon {
@@ -187,19 +176,19 @@ nav {
   background-position-x: -34px;
 } */
 
-/* .tab-name {
+.tab-name {
   font-size: 15px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-.active span {
+/* .active span {
   color: var(--secondary-color);
-}
+} */
 
 .active .tab-icon {
   background-position-x: -34px;
-} */
+}
 
 .nav-btns {
   display: flex;

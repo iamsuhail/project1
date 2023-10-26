@@ -2,31 +2,32 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState } from 'react';
 import "./styles/app.css";
 import Footer from "./components/Footer";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Practice from "./pages/Practice";
 import JobPortal from "./pages/JobPortal";
 import MobileNav from "./components/MobileNav";
 import Signup from "./pages/signup/Signup";
 import NavHover from'./components/NavHover';
+import Courses from './pages/Courses';
 
 
 function App() {
-  // const [isHoverVisible, setHoverVisible] = useState(false);
+  const [isHoverVisible, setHoverVisible] = useState(false);
 
-  // const openHover = () => {
-  //   setHoverVisible(true);
-  // };
+  const openHover = () => {
+    setHoverVisible(true);
+  };
 
-  // const closeHover = () => {
-  //   setHoverVisible(false);
-  // };
+  const closeHover = () => {
+    setHoverVisible(false);
+  };
 
 
   return (
     <>
     <Router>
-       {/* <Navbar openHover={openHover} /> */}
+       <Navbar openHover={openHover} />
       <Routes>
         
         <Route
@@ -38,6 +39,8 @@ function App() {
           path="/Courses-list"
           element={<NavHover/>}
         />
+
+        <Route path='/courses' element={<Courses/>}/>
 
         <Route
           path="/practice"

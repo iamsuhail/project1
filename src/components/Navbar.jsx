@@ -5,8 +5,20 @@ import { NavLink } from "react-router-dom";
 import logo from '../assets/HireXzo_Solutions_LLP_No_BG.png'
 import Signup from "../pages/signup/Signup"
 import { Outlet, Link } from "react-router-dom";
+import HoverCard from "./HoverCard";
+
+
 const Navbar = ({ openHover }) => {
   const [isSignupOpen, setSignupOpen] = useState(false);
+  const [hover, setHover] = useState(false);
+
+  function hoverHandlerTrue(){
+    setHover(true);
+  }
+
+  function hoverHandlerFalse(){
+    setHover(false);
+  }
 
     const openSignup = () => {
         setSignupOpen(true);
@@ -37,11 +49,22 @@ const Navbar = ({ openHover }) => {
           <div className="nav-left">
             <div className="nav-tabs">
               <div className="learn-tab">
-              <NavLink to="/Courses-list" onClick={openHover}>
+              <NavLink to="/courses" onClick={openHover} className="learn-tab-child" onMouseEnter={hoverHandlerTrue} onMouseLeave={hoverHandlerFalse}>
                   {/* <span className="tab-icon"></span> */}
                   <span className="tab-name">Courses</span>
+                  {
+                    hover && <HoverCard hover={hover}/>
+                  }
+
+                
                 </NavLink>
+
+                
               </div>
+              {/* {
+                 hover && <HoverCard hover={hover}/>
+              } */}
+           
               <div className="practice-tab">
                 <NavLink to={"/practice"}>
                   {/* <span className="tab-icon"></span> */}

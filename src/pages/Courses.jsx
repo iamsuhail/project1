@@ -1,6 +1,7 @@
 import React from 'react'
 import course1 from "../assets/images/c1.jpg";
-import HeroSection from '../components/Course_herosection';
+// import HeroSection from '../components/Course_herosection';
+import CourseHeroSection from '../components/CourseHeroSection';
 import Rating from "../components/Course_Rating";
 import Coursellist from '../components/Course_courselist';
 import Faq from "../components/Course_Faq";
@@ -35,12 +36,12 @@ const courseData = {
 };
 const Courses = () => {
   return (
-    <>
-     <HeroSection course={courseData} />
+    <div className='courses-home'>
+     <CourseHeroSection course={courseData} />
      <Rating/>
      <Coursellist/>
      <Faq/>
-    </>
+    </div>
   )
 }
 
