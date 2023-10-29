@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Practice from "./pages/Practice";
-import JobPortal from "./pages/JobPortal";
+import JobPortal from "./pages/Jobs";
 import MobileNav from "./components/MobileNav";
 import Signup from "./pages/signup/Signup";
 import NavHover from'./components/NavHover';
